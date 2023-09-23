@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Create Contact">
+        <div class="slds-p-around_medium">
+            <lightning-record-edit-form
+                object-api-name="Contact"
+                onsuccess={handleSuccess}
+                onerror={handleError}
+            >
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col slds-size_6-of-12">
+                  <lightning-input-field field-name={fieldName.fname}></lightning-input-field>
+                  <lightning-input-field field-name={fieldName.lname}></lightning-input-field>
+                  <lightning-input-field field-name={fieldName.dob}></lightning-input-field>
+                  
+                </div>
+                <div class="slds-col slds-size_6-of-12">
+                  <lightning-input-field field-name={fieldName.email}></lightning-input-field>
+                  <lightning-input-field field-name={fieldName.dept}></lightning-input-field>
+                </div>
+              </div>
+                <div class="slds-m-top_medium">
+                    <lightning-button type="submit" label="Create Contact" variant="brand"></lightning-button>
+                </div>
+            </lightning-record-edit-form>
+        </div>
+    </lightning-card>
+</template>
